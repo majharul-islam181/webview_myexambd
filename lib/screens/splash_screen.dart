@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:myexambd/screens/home_screen.dart';
+import 'package:myexambd/screens/webview_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen>
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const HomeScreen()));
+          MaterialPageRoute(builder: (_) => const Webview_screen()));
     });
 
     super.initState();
@@ -43,6 +43,7 @@ class _SplashScreenState extends State<SplashScreen>
               "Learn New Skills Online \n  With Top Educators",
               style: TextStyle(color: Colors.white, fontSize: 15),
             ),
+           
           ],
         ),
       ),
